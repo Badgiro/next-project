@@ -1,11 +1,9 @@
 import { useState } from 'react'
 import A from '../components/A'
 
-const Users = () => {
-  const [users, setUsers] = useState([
-    { id: 1, name: 'Петя' },
-    { id: 2, name: 'Вася' },
-  ])
+const Users = ({users}) => {
+    
+
   return (
     <div>
       <div className="links">
@@ -31,3 +29,12 @@ const Users = () => {
 }
 
 export default Users
+
+export async function getStaticProps() {
+  const res = await fetch('https://jsonplaceholder.typicode.com/users')
+  const users = await res.json()
+
+  return {
+    props: { users },
+  }
+}

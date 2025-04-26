@@ -1,8 +1,14 @@
+import Head from 'next/head'
 import A from '../components/A'
 
 const Index = () => {
   return (
-    <div>
+    <>
+    <Head>
+      <meta keywords='ulbi-tv, next.js'> </meta>
+      <title>Главная страница</title>
+    </Head>
+     <div>
       <div className="links">
         <A text="Главная" href="/" />
         <A text="Пользователи" href="/users" />
@@ -21,7 +27,8 @@ const Index = () => {
           }
         `}
       </style>
-    </div>
+    </div></>
+   
   )
 }
 
