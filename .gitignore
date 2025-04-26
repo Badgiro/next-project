@@ -1,0 +1,45 @@
+# Файлы зависимостей
+/node_modules/
+/.pnp
+.pnp.js
+
+# Кеши и временные файлы
+/.next/
+/out/
+.next/
+.cache/
+
+# Логи и настройки среды
+*.log
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Настройки редактора и IDE
+/.idea
+/.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Системные файлы
+.DS_Store
+*.pem
+
+# Файлы сборки
+/build
+/dist
+
+# Тестовые покрытия
+/coverage
+
+# Дополнительные файлы
+.next/cache/
+.next/server/
+.next/static/
+.next/trace
+.next/types
