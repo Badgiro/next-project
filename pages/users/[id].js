@@ -1,14 +1,16 @@
 import React from 'react'
 import { useRouter } from 'next/router'
+import MainConteainer from '../../components/MainContainer'
 
 const id = ({user}) => {
     const {query} = useRouter()
    
   return (
-    <>
-    <h1>Ползователь с id {query.id}</h1>
+    <MainConteainer title= {'Пользователь ' + user.name} keywords={'пользователь, ' + user.name}>
+    <h1>Страница пользователя</h1>
+    <h2>Ползователь с id {query.id}</h2>
     <div>имя пользователя {user.name}</div>
-    </>
+    </MainConteainer>
   )
 }
 

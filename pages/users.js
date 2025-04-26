@@ -1,15 +1,11 @@
 import { useState } from 'react'
 import A from '../components/A'
+import MainContainer from '../components/MainContainer'
 
-const Users = ({users}) => {
-    
-
+const Users = ({ users }) => {
   return (
-    <div>
-      <div className="links">
-        <A text="Главная" href="/" />
-        <h1>Список пользователей</h1>
-      </div>
+    <MainContainer title={'Пользователи'} keywords={'пользователи, пользователи'}>
+      <h1>Список пользователей</h1>
 
       <ul>
         {users.map((user) => (
@@ -18,13 +14,7 @@ const Users = ({users}) => {
           </li>
         ))}
       </ul>
-      <styles jsx>
-        {' '}
-        {`
-      
-      `}
-      </styles>
-    </div>
+    </MainContainer>
   )
 }
 
